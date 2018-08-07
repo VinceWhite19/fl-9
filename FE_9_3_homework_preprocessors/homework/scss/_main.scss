@@ -1,0 +1,157 @@
+/*** BASIC ELEMENTS ***/
+
+body {
+    font-family: $fontFamily;
+    color: $fontColorPrimary;
+    background: $contentBackground;
+}
+
+.main-wrapper {
+    width: 960px;
+    padding: 19px 120px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 24px;
+}
+
+header,
+footer {
+    display: flex;
+    flex: 1 100%;
+    align-items: center;
+}
+
+#about h1,
+#contact h1,
+#contact h4 {
+    text-align: right;
+    text-transform: uppercase;
+    color: $fontColorSecondary;
+}
+
+/*** HEADER ***/
+
+header {
+    .logo {
+        max-width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+    nav {
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;
+        flex: 0 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 125px;
+        a {
+            text-decoration: none;
+            color: $fontColorSecondary;
+            font-size: 25px;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+
+    }
+}
+
+/*** TOOLBAR ***/
+
+.toolbar {
+    display: block;
+    text-align: right;
+    width: 100%;
+    padding-bottom: 30px;
+    input[type="text"] {
+        color: $fontColorSecondary;
+        font-size: 15px;
+        outline: 0 none;
+        border: 1px solid $fontColorSecondary;
+        padding: 10px 20px;
+        max-width: 165px;
+        &::placeholder {
+            color: $fontColorSecondary;
+        }
+    }
+
+}
+
+/*** CONTENT ***/
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    article {
+        flex: 1 0 45%;
+        flex-grow: 1;
+        width: 50%;
+        flex-flow: column;
+        padding: 10px;
+        background-color: $colorArticleBackground;
+        margin-bottom: 20px;
+        display: table;
+        .post-description {
+            color: $colorPostDescription;
+            border-bottom: 1px solid $borderColor;
+            padding-bottom: 9px;
+        }
+        h3 {
+            color: $colorPostHeading;
+            line-height: 27px;
+            font-size: 21px;
+            text-transform: uppercase;
+            display: inline;
+            line-break: unset;
+            font-weight: bold;
+        }
+        div {
+            padding: 5px 12px;
+        }
+        &:nth-child(odd) {
+            margin-right: 20px;
+        }
+
+    }
+
+}
+
+/*** CONTACT SECTION ***/
+
+#contact {
+    display: block;
+    width: 100%;
+    .form-group {
+        display: block;
+        padding: 10px 0;
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px 0 13px 13px;
+            max-width: 944px;
+            background: $contentBackground;
+            border: 1px solid $borderColor;
+        }
+    }
+    .submit-btn {
+        float: right;
+        background: $fontColorSecondary;
+        border: none;
+        width: 150px;
+        padding: 11px;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+            background: #3F51B5;
+        }
+    }
+}

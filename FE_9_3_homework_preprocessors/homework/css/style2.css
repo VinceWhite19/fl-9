@@ -1,0 +1,122 @@
+/*** BASIC ELEMENTS ***/
+body {
+  font-family: Times New Roman, serif;
+  color: #757575;
+  background: #eee; }
+
+.main-wrapper {
+  width: 960px;
+  padding: 19px 120px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap; }
+
+img {
+  width: 100%; }
+
+p {
+  line-height: 24px; }
+
+header,
+footer {
+  display: flex;
+  flex: 1 100%;
+  align-items: center; }
+
+#about h1,
+#contact h1,
+#contact h4 {
+  text-align: right;
+  text-transform: uppercase;
+  color: #fc5830; }
+
+/*** HEADER ***/
+header .logo {
+  max-width: 40%; }
+  header .logo img {
+    width: 100%; }
+header nav {
+  border-top: 1px solid #cfd8dc;
+  border-bottom: 1px solid #cfd8dc;
+  flex: 0 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 125px; }
+  header nav a {
+    text-decoration: none;
+    color: #fc5830;
+    font-size: 25px;
+    line-height: 50px;
+    text-transform: uppercase; }
+
+/*** TOOLBAR ***/
+.toolbar {
+  display: block;
+  text-align: right;
+  width: 100%;
+  padding-bottom: 30px; }
+  .toolbar input[type="text"] {
+    color: #fc5830;
+    font-size: 15px;
+    outline: 0 none;
+    border: 1px solid #fc5830;
+    padding: 10px 20px;
+    max-width: 165px; }
+    .toolbar input[type="text"]::placeholder {
+      color: #fc5830; }
+
+/*** CONTENT ***/
+#list {
+  display: flex;
+  flex-wrap: wrap; }
+  #list article {
+    flex: 1 0 45%;
+    flex-grow: 1;
+    width: 50%;
+    flex-flow: column;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    display: table; }
+    #list article .post-description {
+      color: #cfd8dc;
+      border-bottom: 1px solid #cfd8dc;
+      padding-bottom: 9px; }
+    #list article h3 {
+      color: #617d8a;
+      line-height: 27px;
+      font-size: 21px;
+      text-transform: uppercase;
+      display: inline;
+      line-break: unset;
+      font-weight: bold; }
+    #list article div {
+      padding: 5px 12px; }
+    #list article:nth-child(odd) {
+      margin-right: 20px; }
+
+/*** CONTACT SECTION ***/
+#contact {
+  display: block;
+  width: 100%; }
+  #contact .form-group {
+    display: block;
+    padding: 10px 0; }
+    #contact .form-group input,
+    #contact .form-group textarea {
+      width: 100%;
+      padding: 13px 0 13px 13px;
+      max-width: 944px;
+      background: #eee;
+      border: 1px solid #cfd8dc; }
+  #contact .submit-btn {
+    float: right;
+    background: #fc5830;
+    border: none;
+    width: 150px;
+    padding: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer; }
+    #contact .submit-btn:hover {
+      background: #3F51B5; }
