@@ -1,0 +1,230 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0;
+}
+header {
+    background: url(../img/apples.jpg) no-repeat;
+    height: 600px;
+    background-size: 100% auto;
+    background-position: center;
+    display: flex;
+    flex-flow: wrap;
+}
+.logo {
+    flex: 1 50%;
+}
+.logo a {
+    padding: 30px 0 0 30px;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+}
+nav {
+    flex: 2 50%;
+    text-align: right;
+}
+nav a {
+    padding: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 70px;
+}
+nav a:hover {
+    color: rgb(158, 158, 158);
+}
+.header_banner {
+    flex: 3 100%;
+    text-align: center;
+    color: rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+.header_banner h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 0;
+    letter-spacing: 11px;
+}
+.header_banner h1 strong {
+    font-size: 85px;
+}
+.header_banner span {
+    display: block;
+    margin-top: 10%;
+}
+.header_banner a {
+    color: rgb(243, 243, 243);
+    text-decoration: none;
+    border: 2px solid rgb(243, 243, 243);
+    padding: 15px 70px;
+    background: rgba(52, 54, 56, 0.5);
+}
+main {
+    padding-bottom: 15px;
+}
+#top_info {
+    display: flex;
+    background: rgb(255, 255, 255);
+    max-width: 1200px;
+    margin: auto;
+}
+#top_info p {
+    padding: 100px 50px;
+    margin: 0;
+    color: #343638;
+}
+p#top_info_one {
+    flex: 1 50%;
+    font-size: 29px;
+}
+p#top_info_two {
+    flex: 2 50%;
+}
+#featured_articles {
+    padding-top: 100px;
+    background: rgb(232, 232, 232);
+}
+#featured_articles h2 {
+    text-align: center;
+}
+article {
+    display: flex;
+    padding: 10px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+article:nth-child(odd) {
+    flex-flow: row-reverse;
+}
+article .article_text {
+    flex: 2 35%;
+    display: flex;
+}
+article .image_container {
+    flex: 1 65%;
+    position: relative;
+}
+article .likes {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    color: rgb(255, 255, 255);
+    border: 2px solid;
+    padding: 5px;
+    background: rgba(52, 54, 56, 0.5);
+}
+.date {
+    position: absolute;
+    bottom: 17px;
+    left: 10px;
+    color: rgb(255, 255, 255);
+}
+article p {
+    padding: 16px;
+    margin: auto;
+    text-align: center;
+}
+article img {
+    max-width: 100%;
+    height: auto;
+}
+section#newsletter_block {
+    padding: 35px;
+    background: rgb(232, 232, 232);
+}
+form#newsletter {
+    max-width: 1200px;
+    text-align: center;
+    padding: 50px 14px;
+    background: rgb(255, 255, 255);
+    margin: auto;
+}
+#newsletter label {
+    font-size: 23px;
+}
+#newsletter input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 600px;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(52, 54, 56);
+    margin: 0 0 0 20px;
+    line-height: 34px;
+}
+#newsletter input[type="email"]::placeholder {
+    color: rgb(52, 54, 56);
+}
+#newsletter button {
+    background: rgb(52, 54, 56);
+    border: rgb(52, 54, 56);
+    color: rgb(255, 255, 255);
+    padding: 19px;
+    margin: 0 0 0 -4px;
+}
+#newsletter button:hover {
+    cursor: pointer;
+    background: rgb(164, 164, 164);
+}
+footer {
+    padding: 100px 50px 0 50px;
+    display: flex;
+    flex-flow: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-col {
+    flex: 1 23%;
+    margin-left: 15px;
+}
+.footer-col p {
+    color: rgb(164, 164, 164);
+}
+.footer-col p.hours {
+    color: rgb(240, 240, 240);
+    margin-top: -12px;
+}
+.footer-contact p {
+    line-height: 23px;
+}
+#newsletter_footer input[type="email"] {
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(52, 54, 56);
+}
+#newsletter_footer input[type="email"]::placeholder {
+    color: rgb(52, 54, 56);
+}
+#newsletter_footer button {
+    background: rgb(52, 54, 56);
+    border: rgb(52, 54, 56);
+    color: rgb(255, 255, 255);
+    padding: 11px;
+    margin: 0 0 0 -4px;
+}
+#newsletter_footer button:hover {
+    cursor: pointer;
+    background: rgb(164, 164, 164);
+}
+.footer_copyright {
+    flex: 2 100%;
+    max-height: 50px;
+    border-top: 2px solid rgb(243, 243, 243);
+    flex-flow: row;
+    display: flex;
+    margin-top: 100px;
+}
+.footer_copyright span {
+    margin: auto;
+    color: rgb(164, 164, 164);
+}
+.footer_copyright nav a {
+    padding: 13px;
+    color: rgb(52, 54, 56);
+    text-decoration: none;
+    line-height: 58px;
+}
