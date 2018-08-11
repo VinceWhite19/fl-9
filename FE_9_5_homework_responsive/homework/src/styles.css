@@ -1,0 +1,162 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+
+:root {
+    --bg-color--dark: #0a1223;
+    --bg-color--light: #fff;
+    --link: #5d5d5d;
+    --link--active: #54597d;
+    --link--hover: #54597d;
+    --article-title: #ddd;
+    --article-title--dark: #000;
+    --thumbnail--description: #5d5d5d;
+
+    /* These styles are needed only for media query max-width: 575px */
+    /* The 'Up' button (circle button at right bottom corner) */
+    --btn-color: #fff;
+    --btn-bg-color: #5ebcff;
+
+    --navigation-border-bottom: #ddd;
+    --thumbnail-title: #484747;
+}
+
+/* Your styles go here */
+
+* {
+    font-family: 'Arial', serif;
+    ;
+}
+img {
+    max-width: 100%;
+}
+body {
+    max-width: 100%;
+    background-color: var(--bg-color--dark);
+}
+div#scrollToTop {
+    display: none;
+}
+header nav a {
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--link);
+}
+header nav a:active {
+    color: var(--link--active);
+    font-weight: bold;
+}
+header nav a:hover {
+    color: var(--link--hover);
+    font-weight: bold;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+main h1 {
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+
+}
+main h2 {
+    text-align: left;
+    font-size: 42px;
+}
+main p {
+    text-align: justify;
+    line-height: 25px;
+    text-indent: 25px;
+    font-size: 21px;
+}
+main h1 {
+    color: var(--article-title);
+    padding: 100px 0;
+}
+main p {
+    color: var(--thumbnail--description);
+}
+header nav a {
+    font-size: 20px;
+}
+@media (min-width:991px) {
+    nav {
+        text-align: right;
+    }
+    article {
+        display: flex;
+    }
+    article div {
+        flex: 1 50%;
+    }
+    article:nth-child(odd) {
+        flex-flow: row-reverse;
+    }
+}
+
+@media (min-width:576px) and (max-width:990px) {
+    nav {
+        text-align: center;
+    }
+    main {
+        padding: 50px 105px;
+    }
+    article {
+        padding: 35px;
+    }
+}
+
+@media (min-width:576px) {
+    main h2 {
+        background: -webkit-linear-gradient(left, #eee, #333);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+
+@media (max-width:575px) {
+    body {
+        margin: 0;
+        background-color: var(--bg-color--light);
+        max-width: 100%;
+    }
+    header nav a {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        color: var(--link);
+        border-bottom: 1px solid var(--navigation-border-bottom);
+    }
+    main {
+        padding: 50px 30px;
+    }
+    main h1 {
+        color: var(--article-title--dark);
+        padding: 50px 0;
+    }
+    main article section h2 {
+        color: var(--thumbnail-title);
+    }
+    div#scrollToTop {
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        display: block;
+        background-color: var(--btn-bg-color);
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 3px 7px 17px -4px #0c0808;
+    }
+    div#scrollToTop a {
+        color: var(--btn-color);
+        text-decoration: none;
+    }
+}
