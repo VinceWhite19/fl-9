@@ -1,0 +1,90 @@
+div#root {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 400px;
+    text-align: center;
+    padding: 10px 10px 64px 20px;
+    border: 1px solid;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+    margin-top: -4px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 91%;
+    padding: 2px;
+    display: block;
+    float: left;
+    height: 11px;
+}
+
+hr {
+    height: 1px;
+    background: #000;
+}
+
+img {
+    max-width: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -25px;
+}
+
+button.remove {
+    float: right;
+}
+
+ul#tasks {
+    padding-left: 0;
+}
+
+ul#tasks li {
+    padding: 12px 2px 9px 35px;
+    list-style: none;
+    text-align: left;
+    margin-top: 10px;
+    position: relative;
+    line-height: 21px;
+}
+
+
+
+ul#tasks li::after {
+    content: '';
+    position: absolute;
+    height: 17px;
+    width: 18px;
+    border: 2px solid black;
+    left: 10px;
+    border-radius: 4px;
+}
+
+/* Add a "checked" mark when clicked on */
+
+ul#tasks li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 13px;
+    left: 17px;
+    transform: rotate(45deg);
+    height: 13px;
+    z-index: 1;
+    width: 5px;
+}
+
+ul#tasks li.checked::after {
+    background: #000;
+}
